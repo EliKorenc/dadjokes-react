@@ -94,14 +94,14 @@ const App = () => {
     <>
       {/* <FirstJoke /> */}
 
-      {jokesArray.map((joke) => (
+      {jokesArray.map((item) => (
         <Joke
-          key={joke.name}
-          avatar={joke.avatar}
-          name={joke.name}
-          text={joke.text}
-          likes={joke.likes}
-          dislikes={joke.dislikes}
+          key={item.name}
+          avatar={item.avatar}
+          name={item.name}
+          text={item.text}
+          likes={item.likes}
+          dislikes={item.dislikes}
         />
       ))}
     </>
