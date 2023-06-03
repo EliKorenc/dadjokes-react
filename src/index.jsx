@@ -2,10 +2,10 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
-import { Joke } from './components/Joke';
+import { FirstJoke } from './components/FirstJoke';
 
 const App = () => {
-  return <Joke />;
+  return <FirstJoke />;
 };
 
 createRoot(document.querySelector('#app')).render(<App />);

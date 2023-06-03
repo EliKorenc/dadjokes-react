@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
-export const Joke = () => {
+export const FirstJoke = () => {
+  const [numberUp, setNumberUp] = useState(0);
+  const [numberDown, setNumberDown] = useState(0);
+
   return (
     <div className="container">
       <div className="joke">
@@ -21,13 +24,21 @@ export const Joke = () => {
           </p>
         </div>
         <div className="joke__likes">
-          <button id="btn-up" className="btn-like btn-like--up"></button>
+          <button
+            id="btn-up"
+            className="btn-like btn-like--up"
+            onClick={() => setNumberUp(numberUp + 1)}
+          ></button>
           <span id="likes-up" className="likes-count likes-count--up">
-            0
+            {numberUp}
           </span>
-          <button id="btn-down" className="btn-like btn-like--down"></button>
+          <button
+            id="btn-down"
+            className="btn-like btn-like--down"
+            onClick={() => setNumberDown(numberDown + 1)}
+          ></button>
           <span id="likes-down" className="likes-count likes-count--down">
-            0
+            {numberDown}
           </span>
         </div>
       </div>
